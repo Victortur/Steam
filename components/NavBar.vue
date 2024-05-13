@@ -13,10 +13,10 @@
                 <NuxtLink to="/">Tienda</NuxtLink>
             </li>
             <li>
-                <NuxtLink to="/">Comunidad</NuxtLink>
+                <NuxtLink to="/ComunidadPages/Inicio">Comunidad</NuxtLink>
             </li>
             <li>
-                <NuxtLink to="/about">Soporte</NuxtLink>
+                <NuxtLink to="/">Users</NuxtLink>
             </li>
         </ul>
         <ul class="navLeft">
@@ -28,7 +28,8 @@
             </li>
             <li>
                 <div class="ordenUser">
-                    <div class="user" @click="panelActive = !panelActive"> <Icon name="ic:baseline-account-circle" />
+                    <div class="user" @click="panelActive = !panelActive">
+                        <Icon class="iconoUser" name="ic:baseline-account-circle" />
                     </div>
 
                     <div class="panel" v-show="panelActive">
@@ -53,22 +54,27 @@ ul {
         @apply p-4;
     }
 }
-.Steamlogo{
+
+.Steamlogo {
     width: 150px;
+
+
 }
 
-.ordenNav{
+.ordenNav {
     padding: 10px 60px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     font-size: 13px;
     border-bottom: solid 0.5px white;
-    .navCenter{
+
+    .navCenter {
         display: flex;
         align-items: center;
     }
-    .navLeft{
+
+    .navLeft {
         display: flex;
         align-items: center;
     }
@@ -79,6 +85,18 @@ ul {
 .ordenUser {
     display: flex;
     flex-direction: column;
+    height: 40px;
+    width: 40px;
+
+    .user {
+        height: 40px;
+        width: 40px;
+
+        .iconoUser {
+            height: 40px;
+            width: 40px;
+        }
+    }
 }
 
 .panel {
@@ -87,7 +105,7 @@ ul {
     flex-direction: column;
     background-color: aqua;
     width: 300px;
-    top: 82.95px;
+    top: 90px;
     right: 0px;
     height: 300px;
 }
