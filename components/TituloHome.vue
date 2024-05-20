@@ -11,10 +11,7 @@
     flex-direction:row;
     padding: 100px 150px;
     justify-content: space-between;
-    .Titulo{
-        font-size: 70px;
-        font-weight: 900;
-    }
+
     .DescripcionHome{
         font-size: 8px;
         width: 200px;

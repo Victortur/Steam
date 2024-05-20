@@ -12,13 +12,9 @@
 .TituloOrden {
     display: flex;
     flex-direction: row;
-    padding: 100px 150px;
+    padding: 100px 120px;
     justify-content: space-between;
 
-    .Titulo {
-        font-size: 70px;
-        font-weight: 900;
-    }
 
     .BuscadorTitulo {
         display: flex;
@@ -44,7 +40,7 @@
             align-self: center;
             color: rgb(159, 159, 159);
             font-size: 10px;
-            width: 134px;
+            width: 13i4px;
 
         }
     }

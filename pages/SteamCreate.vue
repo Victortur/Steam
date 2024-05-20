@@ -60,14 +60,9 @@
 .TituloOrden {
     display: flex;
     flex-direction: row;
-    padding: 100px 150px;
+    padding: 100px 120px;
     justify-content: space-between;
 
-    .Titulo {
-        font-size: 70px;
-        font-weight: 900;
-        width: 800px;
-    }
 
     .OrdenDesc {
         display: flex;
@@ -89,7 +84,7 @@
 .crearOrden {
     display: flex;
     flex-direction: row;
-    margin: 0px 150px;
+    margin: 0px 120px;
     justify-content: space-between;
 
     .crear {

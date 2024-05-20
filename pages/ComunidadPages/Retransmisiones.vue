@@ -33,7 +33,6 @@
     .ordenNavComunidad {
     padding: 10px 60px;
     font-size: 13px;
-    border-bottom: solid 0.5px white;
     width: 1000px;
 
     .navCenterComunidad {

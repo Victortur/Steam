@@ -1,3 +1,7 @@
+<script setup lang="ts">
+import TarjetaLargaJuego from '~/components/TarjetaLargaJuego.vue';
+</script>
+
 <template>
     <div>
         <TituloBuscador></TituloBuscador>
@@ -24,6 +28,14 @@
         </nav>
     </section>
 
+    <section>
+        <h1 class="TituloArtworksComunidad">Más destacados</h1>
+        <ArticleArtwork></ArticleArtwork>
+        <h1 class="TituloArtworksComunidad">Según tus juegos</h1>
+        <TarjetaLargaJuego></TarjetaLargaJuego>
+
+    </section>
+
 </template>
 
 <style lang="postcss">
@@ -33,7 +45,6 @@
     .ordenNavComunidad {
     padding: 10px 60px;
     font-size: 13px;
-    border-bottom: solid 0.5px white;
     width: 1000px;
 
     .navCenterComunidad {
@@ -47,6 +58,12 @@
         }
     }
 }
+}
+
+.TituloArtworksComunidad{
+    margin-top: 50px;
+    padding: 0px 120px;
+    font-size: larger;
 }
 
 </style>
