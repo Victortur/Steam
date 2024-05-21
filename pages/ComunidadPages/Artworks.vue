@@ -35,6 +35,7 @@ import TarjetaLargaJuego from '~/components/TarjetaLargaJuego.vue';
         <TarjetaLargaJuego></TarjetaLargaJuego>
 
     </section>
+    
 
 </template>
 

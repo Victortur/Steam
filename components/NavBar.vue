@@ -2,25 +2,25 @@
     <nav class="ordenNav">
         <ul>
             <li class="Steamlogo">
-                <NuxtLink to="/about"><img src="public/Steamlogo.svg" alt=""></NuxtLink>
+                <NuxtLink to="/Home"><img src="public/Steamlogo.svg" alt=""></NuxtLink>
             </li>
         </ul>
         <ul class="navCenter">
             <li>
-                <NuxtLink to="/SteamCreate">SteamCreate</NuxtLink>
+                <NuxtLink class="textHover" to="/SteamCreate">SteamCreate</NuxtLink>
             </li>
             <li>
-                <NuxtLink to="/">Tienda</NuxtLink>
+                <NuxtLink class="textHover" to="/">Tienda</NuxtLink>
             </li>
             <li>
-                <NuxtLink to="/ComunidadPages/Inicio">Comunidad</NuxtLink>
+                <NuxtLink class="textHover" to="/ComunidadPages/Inicio">Comunidad</NuxtLink>
             </li>
             <li>
-                <NuxtLink to="/">Users</NuxtLink>
+                <NuxtLink class="textHover" to="/">Users</NuxtLink>
             </li>
         </ul>
         <ul class="navLeft">
-            <li>
+            <li class="InstalarAzul">
                 <NuxtLink to="/about">Instalar</NuxtLink>
             </li>
             <li>
@@ -72,11 +72,21 @@ ul {
     .navCenter {
         display: flex;
         align-items: center;
+        .textHover{
+            transition: 300ms;
+                &:hover {
+                    color: #0047ff;
+                }
+        }
     }
 
     .navLeft {
         display: flex;
         align-items: center;
+        .InstalarAzul{
+            background-color: #0047ff;
+            border-radius: 10px;
+        }
     }
 
 

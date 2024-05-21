@@ -87,6 +87,12 @@
     display: flex;
     flex-direction: row;
     padding: 80px 120px;
+    transition: 300ms;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(102%);
+    }
 
     .imgArtwork {
         width: 900px;
@@ -135,7 +141,11 @@
     display: flex;
     flex-direction: row;
     padding: 0px 120px 80px 120px;
-
+    transition: 300ms;
+    &:hover {
+        cursor: pointer;
+        transform: scale(102%);
+    }
     .imgArtwork {
         margin-right: 15px;
         height: 347.94px;
@@ -174,7 +184,11 @@
     display: flex;
     flex-direction: row;
     padding: 0px 120px 80px 120px;
-
+    transition: 300ms;
+    &:hover {
+        cursor: pointer;
+        transform: scale(102%);
+    }
     .imgArtwork {
         width: 900px;
         margin-right: 15px;
@@ -208,6 +222,4 @@
     }
 
 }
-
-
 </style>

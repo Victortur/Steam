@@ -28,6 +28,11 @@
     display: flex;
     flex-direction: column;
     padding: 80px 120px;
+    transition: 300ms;
+    &:hover {
+        cursor: pointer;
+        transform: scale(102%);
+    }
 
     .imgArtwork {}
 

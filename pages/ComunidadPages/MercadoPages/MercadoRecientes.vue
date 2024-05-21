@@ -28,11 +28,11 @@
     <section>
         <nav class="NavMercado">
             <NuxtLink to="/ComunidadPages/Mercado">
-                <h1 class="TituloInicioComunidad2">Articulos populares</h1>
+                <h1 class="TituloInicioComunidad">Articulos populares</h1>
             </NuxtLink>
 
             <NuxtLink to="/ComunidadPages/MercadoPages/MercadoRecientes">
-                <h1 class="TituloInicioComunidad">Recientes</h1>
+                <h1 class="TituloInicioComunidad2">Recientes</h1>
             </NuxtLink>
 
         </nav>

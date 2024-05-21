@@ -8,7 +8,7 @@
 
             <ul class="navCenterComunidad">
                 <li>
-                    <NuxtLink to="/ComunidadPages/Inicio">Inicio</NuxtLink>
+                    <NuxtLink class="textHover" to="/ComunidadPages/Inicio">Inicio</NuxtLink>
                 </li>
                 <li>
                     <NuxtLink class="NavComunidadGreyText" to="/ComunidadPages/Artworks">Artworks</NuxtLink>
@@ -53,6 +53,13 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            .textHover{
+                transition: 300ms;
+                &:hover {
+                    color: #0047ff;
+                }
+
+            }
         }
     }
 }
