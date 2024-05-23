@@ -1,19 +1,33 @@
 <template>
 
     <article class="ArticuloPastilla">
-        <img src="public/PastillaJuego.svg" alt="">
+        <img class="ImgPastilla" :src="`https://picsum.photos/500/30${count}`" :alt="game.name">
         <div class="ArticuloPastillaInfo">
             <div class="ArticuloName">
-                <h4>Black Ops 4</h4>
-                <h6>Call of Duty</h6>
+                <h4>{{ game?.name || 'Nombre por defecto' }}</h4>
+                <h6>{{ game?.category || 'Categoría por defecto' }}</h6>
             </div>
             <div class="ArticuloPrice">
                 <h4>$47.99</h4>
             </div>
         </div>
     </article>
-
+    
 </template>
+
+<script setup>
+const props = defineProps({
+    game: {
+        type: Object,
+        default: () => ({ name: 'Nombre por defecto', category: 'Categoría por defecto', price: 'Precio por defecto' })
+    },
+    count: {
+        type: Number,
+    }
+});
+const { game } = props;
+const { count } = props;
+</script>
 
 
 <style lang="postcss">
@@ -30,6 +44,12 @@
         cursor: pointer;
         transform: scale(102%);
         filter: drop-shadow(0px 0px 30.2px rgba(255, 255, 255, 0.29));
+    }
+
+    .ImgPastilla {
+        width: 498.34px;
+        border-radius: 52px;
+        object-fit: cover;
     }
 
     .ArticuloPastillaInfo {

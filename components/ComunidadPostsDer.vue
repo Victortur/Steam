@@ -3,7 +3,7 @@
 
         <div class="SectionArticles1">
             <div class="ArticlesLeft1">
-
+                
                 <article class="SmallArticle1">
                     <h4>Elite Dangerous</h4>
                     <div class="UserInfo1">

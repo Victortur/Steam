@@ -37,9 +37,22 @@
 
         </nav>
 
-        <PastillaJuegos></PastillaJuegos>
-        <PastillaJuegos></PastillaJuegos>
-        <PastillaJuegos></PastillaJuegos>
+        <section v-if="data != null">
+            <PastillaJuegos
+                v-for="(game, index) in data.results.slice(0, numberOfGamesToShow)"
+                :key="index"
+                :game="game"
+                :count="index"
+            />
+        </section>
+
+        <button class="VerMas">
+            <p>
+                Ver mas
+            </p>
+        </button>
+
+
 
     </section>
 
@@ -75,4 +88,20 @@
         color: #0047ff;
     }
 }
+
+.VerMas {
+    margin: 0px 120px;
+    font-size: 13px;
+    background-color: #0047ff;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
 </style>
+
+<script setup>
+const { data } = useFetch('https://api.rawg.io/api/games?key=d45f1e8e88654d059e56f179e27d9327');
+
+let numberOfGamesToShow = 6; // Define cuántos juegos quieres mostrar
+</script>

@@ -3,33 +3,34 @@
 
         <div class="SectionArticles">
             <div class="ArticlesLeft">
-                <article class="BigArticle">
-                    <h4>Elite Dangerous</h4>
-                    <div class="UserInfo">
-                        <div class="ProfileiconOrden">
-                            <img class="Profileicon" src="public/Profileicon.svg" alt="">
-                            <h5>Mateo</h5>
+                <NuxtLink class="BigArticle" :to="`/gamesdet/${game.id}`">
+                    <article>
+                        <h4>{{ game?.name || 'Nombre por defecto' }}</h4>
+                        <div class="UserInfo">
+                            <div class="ProfileiconOrden">
+                                <img class="Profileicon" src="public/Profileicon.svg" alt="">
+                                <h5>Mateo</h5>
+                            </div>
+                            <h6>{{ game?.updated || 'Fecha por defecto' }}</h6>
                         </div>
-                        <h6>Posted on 12 Sept 2023</h6>
-                    </div>
-                    <img src="public/imgJuego3.png" alt="">
-                    <div class="UserInfo1">
-                        <h6>A game made for artists</h6>
-                        <div>
-                            <img src="public/likeImg.svg" alt="">
+                        <img src="public/imgJuego3.png" alt="">
+                        <div class="UserInfo1">
+                            <h6>A game made for artists</h6>
+                            <div>
+                                <img src="public/likeImg.svg" alt="">
+                            </div>
                         </div>
-                    </div>
-                </article>
-
+                    </article>
+                </NuxtLink>
 
                 <article class="SmallArticle">
-                    <h4>Elite Dangerous</h4>
+                    <h4>{{ game?.name || 'Nombre por defecto' }}</h4>
                     <div class="UserInfo">
                         <div class="ProfileiconOrden">
                             <img class="Profileicon" src="public/Profileicon.svg" alt="">
                             <h5>Mateo</h5>
                         </div>
-                        <h6>Posted on 12 Sept 2023</h6>
+                        <h6>{{ game?.updated || 'Fecha por defecto' }}</h6>
                     </div>
                     <img class="ImgArticleSmall" src="public/imgJuego1.svg" alt="">
                     <div class="UserInfo1">
@@ -49,6 +50,20 @@
     </section>
 </template>
 
+
+<script setup>
+const props = defineProps({
+    game: {
+        type: Object,
+        default: () => ({ name: 'Nombre por defecto', category: 'Categoría por defecto', price: 'Precio por defecto' })
+    },
+    count: {
+        type: Number,
+    }
+});
+const { game } = props;
+const { count } = props;
+</script>
 
 <style lang="postcss">
 .SectionComunidad {

@@ -13,10 +13,10 @@
 
     <section class="crearOrden">
         <div class="crear">
-            <p>Crear</p>
+            <img src="public/Crear.svg" alt="">
         </div>
         <div class="explorar">
-            <p>Explorar</p>
+            <img src="public/Explorar.svg" alt="">
         </div>
     </section>
 
@@ -54,6 +54,7 @@
             </h4>
         </div>
     </section>
+
 </template>
 
 <style lang="postcss">
@@ -94,7 +95,6 @@
         padding-bottom: 10px;
         width: 600px;
         height: 200px;
-        background-color: #181a1f;
         border-radius: 20px;
     }
 
@@ -105,7 +105,6 @@
         padding-bottom: 10px;
         width: 600px;
         height: 200px;
-        background-color: #181a1f;
         border-radius: 20px;
     }
 }
@@ -113,7 +112,7 @@
 .ordenDescAbajo{
     display: flex;
     flex-direction: row;
-    padding: 100px 150px;
+    padding: 100px 120px;
 
     .ordenIzq{
         margin: 10px;
@@ -131,5 +130,4 @@
     }
 }
 </style>
-<script>
-</script>
+

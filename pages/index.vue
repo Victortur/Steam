@@ -2,7 +2,6 @@ import ArticleCard from '~/components/global/ArticleCard.vue';
 <template>
     <div>
         <TituloHome></TituloHome>
-        <HeaderImage :source="'/img1.jpg'"></HeaderImage>
     </div>
 
     <section class="ImgTienda">
@@ -16,9 +15,13 @@ import ArticleCard from '~/components/global/ArticleCard.vue';
         :article="article">
         </ArticleCard>
     </section>
+
 </template>
 
 <script setup>
+
+
+
     import { ref } from 'vue'
     const title = ref('Página de inicio')
 

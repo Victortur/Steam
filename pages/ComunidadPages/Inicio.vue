@@ -29,11 +29,17 @@
 
         <h1 class="TituloInicioComunidad">Posts Recientes</h1>
 
-        <ComunidadPostsIzq></ComunidadPostsIzq>
 
-        <ComunidadPostsDer></ComunidadPostsDer>
+        <section v-if="data != null">
+            <ComunidadPostsIzq v-for="(game, index) in data.results.slice(0, numberOfPostsToShow)" :key="index"
+                :game="game" :count="index" />
+        </section>
 
-        <ComunidadPostsIzq></ComunidadPostsIzq>
+        <button class="VerMas">
+            <p>
+                Ver mas
+            </p>
+        </button>
 
     </section>
 
@@ -53,8 +59,10 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            .textHover{
+
+            .textHover {
                 transition: 300ms;
+
                 &:hover {
                     color: #0047ff;
                 }
@@ -64,9 +72,26 @@
     }
 }
 
-.TituloInicioComunidad{
+.TituloInicioComunidad {
     margin-top: 50px;
     padding: 0px 120px;
     font-size: larger;
 }
+
+.VerMas {
+    margin: 0px 120px;
+    font-size: 13px;
+    background-color: #0047ff;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
 </style>
+
+<script setup>
+const { data } = useFetch('https://api.rawg.io/api/games?key=d45f1e8e88654d059e56f179e27d9327')
+
+let numberOfPostsToShow = 3; // Define cuántos juegos quieres mostrar
+
+</script>

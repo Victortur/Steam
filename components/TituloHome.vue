@@ -9,12 +9,14 @@
 .TituloOrden{
     display: flex;
     flex-direction:row;
-    padding: 100px 150px;
+    padding: 100px 120px;
     justify-content: space-between;
 
     .DescripcionHome{
         font-size: 8px;
         width: 200px;
+        display: flex;
+        align-items: center;
     }
 }
 
