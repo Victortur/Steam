@@ -58,6 +58,25 @@
     padding-top: 50px;
     padding-bottom: 50px;
 
+    @media (max-width: 500px) {
+        width: 100%;
+        font-size: 10px;
+        justify-content: space-between;
+        gap: 5px;
+        height: 180px;
+        padding: 20px;
+
+
+    }
+
+    .img-footer {
+        @media (max-width: 500px) {
+            width: 50px;
+
+
+        }
+    }
+
     .left-footer {
         display: flex;
         flex-direction: column;

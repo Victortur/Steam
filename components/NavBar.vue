@@ -73,6 +73,11 @@ ul {
 .Steamlogo {
     width: 150px;
     align-self: center;
+
+    @media (max-width: 500px) {
+        width: 80px;
+        align-self: center;
+    }
 }
 
 .ordenNav {
@@ -86,6 +91,22 @@ ul {
     position: sticky;
     top: 0;
     z-index: 1000;
+
+    @media (max-width: 500px) {
+        padding: 6px 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 8px;
+        border-bottom: solid 0.5px white;
+        backdrop-filter: blur(10px);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+
+
+
+    }
 }
 
 .navCenter {

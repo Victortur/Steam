@@ -102,16 +102,26 @@ import TarjetaLargaJuego from '~/components/TarjetaLargaJuego.vue';
         padding: 20px;
         border-radius: 40px;
         background-color: rgba(17, 18, 22, 1);
+        transition: 300ms;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(102%);
+            filter: drop-shadow(0px 0px 30.2px rgba(255, 255, 255, 0.29));
+        }
+
         .DirectoInfo {
             display: flex;
             flex-direction: row;
             margin-top: 20px;
-            .ImgStream{
+
+            .ImgStream {
                 width: 40px;
                 display: flex;
                 align-self: center;
             }
-            .NombreStream{
+
+            .NombreStream {
                 margin-left: 20px;
             }
         }
