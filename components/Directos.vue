@@ -70,7 +70,9 @@
             transition: 300ms;
 
             @media (max-width: 500px) {
-                border-radius: 20px;
+                border-radius: 5px;
+                padding: 10px;
+                margin-right: 5px;
             }
 
             &:hover {
