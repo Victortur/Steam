@@ -130,6 +130,9 @@ ul {
         background-color: #0047ff;
         border-radius: 10px;
         margin-right: 10px;
+        @media (max-width: 500px) {
+            margin-right: 0px;
+                    }
     }
 }
 

@@ -11,7 +11,7 @@
                     <h6>Posted on 12 Sept 2023</h6>
                 </div>
                 <div class="OrdenInfoArtwork">
-                    <h4>Creado en: It takes two</h4>
+                    <h4 class="MasPeq">Creado en: It takes two</h4>
                     <h6>Los Sueños. El LSPD informa de un gran aumento de los delitos en toda el área metropolitana de
                         Los
                         Sueños. Los SWAT tratan de solventar situaciones de alto riesgo como tomas de rehenes, amenazas
@@ -38,7 +38,7 @@
                     <h6>Posted on 12 Sept 2023</h6>
                 </div>
                 <div class="OrdenInfoArtwork">
-                    <h4>Creado en: It takes two</h4>
+                    <h4 class="MasPeq">Creado en: It takes two</h4>
                     <h6>Los Sueños. El LSPD informa de un gran aumento de los delitos en toda el área metropolitana de
                         Los
                         Sueños. Los SWAT tratan de solventar situaciones de alto riesgo como tomas de rehenes, amenazas
@@ -66,7 +66,7 @@
                     <h6>Posted on 12 Sept 2023</h6>
                 </div>
                 <div class="OrdenInfoArtwork">
-                    <h4>Creado en: It takes two</h4>
+                    <h4 class="MasPeq">Creado en: It takes two</h4>
                     <h6>Los Sueños. El LSPD informa de un gran aumento de los delitos en toda el área metropolitana de
                         Los
                         Sueños. Los SWAT tratan de solventar situaciones de alto riesgo como tomas de rehenes, amenazas
@@ -89,6 +89,10 @@
     padding: 80px 120px;
     transition: 300ms;
 
+    @media (max-width: 500px) {
+        padding: 30px 10px;
+    }
+
     &:hover {
         cursor: pointer;
         transform: scale(102%);
@@ -97,6 +101,14 @@
     .imgArtwork {
         width: 900px;
         margin-right: 15px;
+
+        @media (max-width: 500px) {
+            width: 50%;
+            height: 370px;
+            margin-right: 5px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
     }
 
     .OrdenArtwork {
@@ -112,6 +124,13 @@
             margin-bottom: 20px;
             align-items: center;
 
+            @media (max-width: 500px) {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 20px;
+                align-items: center;
+            }
+
             .ProfileiconOrden1 {
                 display: flex;
                 flex-direction: row;
@@ -119,11 +138,22 @@
                 .Profileicon1 {
                     margin-right: 10px;
                     width: 15px;
+
+                    @media (max-width: 500px) {
+                        margin-right: 10px;
+                        width: 10px;
+                    }
                 }
             }
         }
 
-        .OrdenInfoArtwork {}
+        .OrdenInfoArtwork {
+            .MasPeq {
+                @media (max-width: 500px) {
+                    font-size: 12px;
+                }
+            }
+        }
 
         .IconosArtOrden {
             display: flex;
@@ -142,13 +172,25 @@
     flex-direction: row;
     padding: 0px 120px 80px 120px;
     transition: 300ms;
+    @media (max-width: 500px) {
+        padding: 30px 10px;
+    }
+
     &:hover {
         cursor: pointer;
         transform: scale(102%);
     }
+
     .imgArtwork {
         margin-right: 15px;
         height: 347.94px;
+        @media (max-width: 500px) {
+            width: 50%;
+            height: 370px;
+            margin-right: 5px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
     }
 
     .OrdenArtwork {
@@ -163,6 +205,12 @@
             justify-content: space-between;
             margin-bottom: 20px;
             align-items: center;
+            @media (max-width: 500px) {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 20px;
+                align-items: center;
+            }
 
             .ProfileiconOrden1 {
                 display: flex;
@@ -171,11 +219,21 @@
                 .Profileicon1 {
                     margin-right: 10px;
                     width: 15px;
+                    @media (max-width: 500px) {
+                        margin-right: 10px;
+                        width: 10px;
+                    }
                 }
             }
         }
 
-        .OrdenInfoArtwork {}
+        .OrdenInfoArtwork {
+            .MasPeq {
+                @media (max-width: 500px) {
+                    font-size: 12px;
+                }
+            }
+        }
     }
 
 }
@@ -185,13 +243,25 @@
     flex-direction: row;
     padding: 0px 120px 80px 120px;
     transition: 300ms;
+    @media (max-width: 500px) {
+        padding: 30px 10px;
+    }
+
     &:hover {
         cursor: pointer;
         transform: scale(102%);
     }
+
     .imgArtwork {
         width: 900px;
         margin-right: 15px;
+        @media (max-width: 500px) {
+            width: 50%;
+            height: 370px;
+            margin-right: 5px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
     }
 
     .OrdenArtwork {
@@ -206,6 +276,12 @@
             justify-content: space-between;
             margin-bottom: 20px;
             align-items: center;
+            @media (max-width: 500px) {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 20px;
+                align-items: center;
+            }
 
             .ProfileiconOrden1 {
                 display: flex;
@@ -214,11 +290,21 @@
                 .Profileicon1 {
                     margin-right: 10px;
                     width: 15px;
+                    @media (max-width: 500px) {
+                        margin-right: 10px;
+                        width: 10px;
+                    }
                 }
             }
         }
 
-        .OrdenInfoArtwork {}
+        .OrdenInfoArtwork {
+            .MasPeq {
+                @media (max-width: 500px) {
+                    font-size: 12px;
+                }
+            }
+        }
     }
 
 }

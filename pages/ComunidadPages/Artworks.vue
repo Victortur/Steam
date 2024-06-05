@@ -21,7 +21,8 @@ import TarjetaLargaJuego from '~/components/TarjetaLargaJuego.vue';
                     <NuxtLink class="NavComunidadGreyText" to="/ComunidadPages/Mercado">Mercado</NuxtLink>
                 </li>
                 <li>
-                    <NuxtLink class="NavComunidadGreyText" to="/ComunidadPages/Retransmisiones">Retransmisiones</NuxtLink>
+                    <NuxtLink class="NavComunidadGreyText" to="/ComunidadPages/Retransmisiones">Retransmisiones
+                    </NuxtLink>
                 </li>
             </ul>
 
@@ -35,41 +36,43 @@ import TarjetaLargaJuego from '~/components/TarjetaLargaJuego.vue';
         <TarjetaLargaJuego></TarjetaLargaJuego>
 
     </section>
-    
+
 
 </template>
 
 <style lang="postcss">
-.ordenNavComunidad1{
+.ordenNavComunidad1 {
     display: flex;
     justify-content: center;
-    .ordenNavComunidad {
-    padding: 10px 60px;
-    font-size: 13px;
-    width: 1000px;
 
-    .navCenterComunidad {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        border-top: solid  0.5px white;
-        border-bottom: solid  0.5px white;
-        .NavComunidadGreyText{
-            color: grey;
+    .ordenNavComunidad {
+        padding: 10px 60px;
+        font-size: 13px;
+        width: 1000px;
+
+        .navCenterComunidad {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: solid 0.5px white;
+            border-bottom: solid 0.5px white;
+
+            .NavComunidadGreyText {
+                color: grey;
+            }
         }
     }
 }
-}
 
-.TituloArtworksComunidad{
+.TituloArtworksComunidad {
     margin-top: 50px;
     padding: 0px 120px;
     font-size: larger;
+
     @media (max-width: 500px) {
         margin-top: 50px;
-    padding: 0px 20px;
-    font-size: 10px;
+        padding: 0px 20px;
+        font-size: 10px;
     }
 }
-
 </style>

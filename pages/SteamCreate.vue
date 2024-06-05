@@ -1,5 +1,5 @@
 <template>
-    <section class="TituloOrden">
+    <section class="TituloOrden1">
         <h1 class="Titulo">Bienvenido a SteamCreate!</h1>
         <div class="OrdenDesc">
             <h3 class="TituloDesc">
@@ -58,11 +58,24 @@
 </template>
 
 <style lang="postcss">
-.TituloOrden {
+.TituloOrden1 {
     display: flex;
     flex-direction: row;
     padding: 100px 120px;
     justify-content: space-between;
+
+    @media (max-width: 500px) {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 20px;
+        justify-content: space-bet
+    }
+
+    .Titulo {
+        @media (max-width: 500px) {
+            font-size: 12px;
+        }
+    }
 
 
     .OrdenDesc {
@@ -77,6 +90,10 @@
         .DescripcionHome {
             font-size: 10px;
             width: 400px;
+
+            @media (max-width: 500px) {
+                width: 100%;
+            }
         }
     }
 
@@ -87,6 +104,10 @@
     flex-direction: row;
     margin: 0px 120px;
     justify-content: space-between;
+    @media (max-width: 500px) {
+                width: 100%;
+                margin: 0px 0px;
+            }
 
     .crear {
         display: flex;
@@ -96,6 +117,11 @@
         width: 600px;
         height: 200px;
         border-radius: 20px;
+        @media (max-width: 500px) {
+                width: 50%;
+                height: 80px;
+                object-fit: cover;
+            }
     }
 
     .explorar {
@@ -106,28 +132,38 @@
         width: 600px;
         height: 200px;
         border-radius: 20px;
+        @media (max-width: 500px) {
+                width: 50%;
+                height: 80px;
+            }
     }
 }
 
-.ordenDescAbajo{
+.ordenDescAbajo {
     display: flex;
     flex-direction: row;
     padding: 100px 120px;
+    @media (max-width: 500px) {
+        padding: 20px 20px;
+    }
 
-    .ordenIzq{
+
+    .ordenIzq {
         margin: 10px;
         width: 400px;
-        .DescripcionHome1{
+
+        .DescripcionHome1 {
             font-size: 10px;
         }
     }
-    .ordenDer{
+
+    .ordenDer {
         margin: 10px;
         width: 400px;
-        .DescripcionHome1{
+
+        .DescripcionHome1 {
             font-size: 10px;
         }
     }
 }
 </style>
-

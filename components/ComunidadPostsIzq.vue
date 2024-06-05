@@ -71,6 +71,12 @@ const { count } = props;
     flex-direction: column;
     padding: 30px 120px;
 
+    @media (max-width: 500px) {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 10px;
+    }
+
     .SectionTitle {}
 
     .SectionArticles {
@@ -80,9 +86,10 @@ const { count } = props;
             display: flex;
             flex-direction: row;
 
-            @media (max-width: 1000px) {
+            @media (max-width: 500px) {
                 display: flex;
                 flex-direction: column;
+                padding: 10px 0px;
             }
 
             .BigArticle {
@@ -92,9 +99,13 @@ const { count } = props;
                 border-radius: 32px;
                 transition: 300ms;
 
-                @media (max-width: 1000px) {
+                @media (max-width: 500px) {
                     width: 100%;
                     margin-bottom: 60px;
+                    padding: 5px;
+                    width: 100%;
+                    border-radius: 32px;
+                    transition: 300ms;
                 }
 
                 &:hover {
@@ -148,6 +159,10 @@ const { count } = props;
                 @media (max-width: 1000px) {
                     width: 100%;
                     margin-left: 0px;
+                    background-color: #111216;
+                    padding: 5px;
+                    width: 100%;
+
                 }
 
                 &:hover {
@@ -167,6 +182,7 @@ const { count } = props;
                         max-height: 703px;
                         width: 100%;
                         object-fit: cover;
+                        height: 212px;
                     }
                 }
 

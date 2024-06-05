@@ -55,6 +55,10 @@ import ArticleCard from '~/components/global/ArticleCard.vue';
     display: flex;
     flex-direction: row;
     align-items: center;
+    @media (max-width: 500px) {
+        margin: 20px 20px;
+        
+        }
 
     .Linea {
         width: 100%;

@@ -91,8 +91,8 @@
 
                 .colorb {
                     color: black;
-                    
-                    
+
+
                 }
             }
 
@@ -137,6 +137,11 @@
             .OrdenInicioBoton {
                 display: flex;
                 flex-direction: row;
+
+                @media (max-width: 500px) {
+                    margin-top: 10px;
+
+                }
 
                 .InicioBoton {
                     display: flex;
@@ -190,7 +195,7 @@
             position: absolute;
             justify-content: center;
             position: fixed;
-            top: 450px;
+            top: 460px;
             left: 0%;
             filter: drop-shadow(0px 0px 30.2px rgba(255, 255, 255, 0.29));
         }

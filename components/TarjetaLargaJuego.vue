@@ -23,12 +23,18 @@
 </template>
 
 <style lang="postcss">
-
 .ArticleArtwork3 {
     display: flex;
     flex-direction: column;
     padding: 80px 120px;
     transition: 300ms;
+
+
+    @media (max-width: 500px) {
+        padding: 30px 10px;
+
+    }
+
     &:hover {
         cursor: pointer;
         transform: scale(102%);
@@ -41,6 +47,7 @@
         flex-direction: row;
         justify-content: space-between;
         margin-top: 15px;
+
         .OrdenArtwork {
             display: flex;
             flex-direction: row;
@@ -59,6 +66,10 @@
                     .Profileicon1 {
                         margin-right: 10px;
                         width: 15px;
+                        @media (max-width: 500px) {
+                        margin-right: 10px;
+                        width: 10px;
+                    }
                     }
                 }
             }
@@ -78,5 +89,4 @@
     }
 
 }
-
 </style>
