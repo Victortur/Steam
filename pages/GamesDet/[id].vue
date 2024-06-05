@@ -58,12 +58,19 @@ function prevSlide() {
     .Ordendetalle {
         display: flex;
         flex-direction: row;
+        @media (max-width: 500px) {
+            flex-direction: column;
+            }
 
         .OrdenDetInfor {
             display: flex;
             flex-direction: column;
             width: 40%;
             padding: 0px 20px;
+            @media (max-width: 500px) {
+                width: 100%;
+            padding: 0px 10px;
+            }
 
             .white {
                 color: white;
