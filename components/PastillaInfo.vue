@@ -6,8 +6,7 @@
                 <div class="ArticuloName">
                     <h4>{{ game?.name || 'Nombre por defecto' }}</h4>
                     <h6 class="white">¡Atención, fanáticos de Counter-Strike: Global Offensive! Valve ha lanzado una emocionante
-                        actualización que trae consigo la esperada Operación Riptide, junto con una serie de mejoras
-                        significativas para el modo competitivo.</h6>
+                        actualización que trae consigo la esperada Operación Riptide.</h6>
                     <h6 class="categ">{{ game?.category || 'Categoría por defecto' }}</h6>
                     <h6 class="fecha">14/03/2024   16:45</h6>
                 </div>

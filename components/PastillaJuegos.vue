@@ -43,10 +43,10 @@ const { count } = props;
     @media (max-width: 500px) {
         display: flex;
         flex-direction: row;
-        margin: 20px 20px;
+        margin: 10px 5px;
         background-color: #111216;
-        height: 300px;
-        border-radius: 20px;
+        height: 200px;
+        border-radius: 10px;
         transition: 300ms;
     }
 
@@ -63,7 +63,7 @@ const { count } = props;
 
         @media (max-width: 500px) {
             width: 100px;
-            border-radius: 20px;
+            border-radius: 10px;
             object-fit: cover;
 
         }

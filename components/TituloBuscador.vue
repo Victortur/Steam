@@ -18,7 +18,7 @@
     @media (max-width: 500px) {
         display: flex;
         flex-direction: row;
-        padding: 20px 20px;
+        padding: 10px 10px;
         justify-content: space-between;
     }
 
