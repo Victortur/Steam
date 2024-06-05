@@ -6,7 +6,7 @@
 
                 <div class="DirectoInfo1">
                     <div>
-                        <img class="ImgStream1" src="public/illoCirculo.svg" alt="">
+                        <img class="ImgStream1" src="public/illo2Circulo.svg" alt="">
                     </div>
                     <div class="NombreStream1">
                         <h5>Jugando a Red Dead Redemption!!</h5>
@@ -20,7 +20,7 @@
 
                 <div class="DirectoInfo1">
                     <div>
-                        <img class="ImgStream1" src="public/illoCirculo.svg" alt="">
+                        <img class="ImgStream1" src="public/illo2Circulo.svg" alt="">
                     </div>
                     <div class="NombreStream1">
                         <h5>Jugando a Red Dead Redemption!!</h5>

@@ -37,7 +37,7 @@ import TarjetaLargaJuego from '~/components/TarjetaLargaJuego.vue';
 
                 <div class="DirectoInfo">
                     <div>
-                        <img class="ImgStream" src="public/illoCirculo.svg" alt="">
+                        <img class="ImgStream" src="public/illo2Circulo.svg" alt="">
                     </div>
                     <div class="NombreStream">
                         <h5>Jugando a Red Dead Redemption!!</h5>
