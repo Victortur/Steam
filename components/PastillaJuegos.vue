@@ -1,18 +1,18 @@
 <template>
-
-    <article class="ArticuloPastilla">
-        <img class="ImgPastilla" :src="`https://picsum.photos/500/30${count}`" :alt="game.name">
-        <div class="ArticuloPastillaInfo">
-            <div class="ArticuloName">
-                <h4>{{ game?.name || 'Nombre por defecto' }}</h4>
-                <h6>{{ game?.category || 'Categoría por defecto' }}</h6>
+    <NuxtLink class="BigArticle" :to="`/gamesdet/${game.id}`">
+        <article class="ArticuloPastilla">
+            <img class="ImgPastilla" :src="game.background_image" :alt="game.name">
+            <div class="ArticuloPastillaInfo">
+                <div class="ArticuloName">
+                    <h4>{{ game?.name || 'Nombre por defecto' }}</h4>
+                    <h6>{{ game?.category || 'Categoría por defecto' }}</h6>
+                </div>
+                <div class="ArticuloPrice">
+                    <h4>$47.99</h4>
+                </div>
             </div>
-            <div class="ArticuloPrice">
-                <h4>$47.99</h4>
-            </div>
-        </div>
-    </article>
-    
+        </article>
+    </NuxtLink>
 </template>
 
 <script setup>

@@ -38,17 +38,13 @@
         </nav>
 
         <section v-if="data != null">
-            <PastillaJuegos
-                v-for="(game, index) in data.results.slice(0, numberOfGamesToShow)"
-                :key="index"
-                :game="game"
-                :count="index"
-            />
+            <PastillaJuegos v-for="(game, index) in data.results.slice(0, numberOfGamesToShow)" :key="index"
+                :game="game" :count="index" />
         </section>
-        
-        <button class="VerMas">
+
+        <button class="VerMas" @click="toggleGames">
             <p>
-                Ver mas
+                {{ showMore ? 'Ver menos' : 'Ver más' }}
             </p>
         </button>
 
@@ -97,9 +93,15 @@
 }
 
 </style>
-
 <script setup>
+import { ref } from 'vue';
 const { data } = useFetch('https://api.rawg.io/api/games?key=d45f1e8e88654d059e56f179e27d9327');
 
-let numberOfGamesToShow = 6; // Define cuántos juegos quieres mostrar
+let numberOfGamesToShow = ref(6);
+const showMore = ref(false);
+
+const toggleGames = () => {
+    showMore.value = !showMore.value;
+    numberOfGamesToShow.value = showMore.value ? 25 : 6;
+};
 </script>

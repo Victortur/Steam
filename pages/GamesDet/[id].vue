@@ -1,6 +1,6 @@
 <template>
     <div v-if="data != null">
-        <header-image :source="data.background_image" />
+        <ImageDet :source="data.background_image" />
         <main class="container">
             <h1>{{data.name}}</h1>
             <p v-html="data.description">

@@ -1,6 +1,6 @@
 <template>
     <nav class="footer-container">
-        <img class="linea-fina"  src="public/Line6.png">
+        <img class="linea-fina" src="public/Line6.png">
         <div class="footer">
             <div class="img-footer">
                 <img src="public/logo1.png">
@@ -28,45 +28,47 @@
                     <p>Instagram</p>
                 </div>
             </div>
-            
+
         </div>
     </nav>
+
 </template>
 
 <style lang="postcss">
-    
-    .linea-fina{
+.linea-fina {
     opacity: 70%;
     height: 0.5px;
     width: 100%;
 }
-    .footer-container{
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    width: 85%;
+    justify-content: space-between;
+    gap: 100px;
+    height: 280px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    .left-footer {
         display: flex;
         flex-direction: column;
-        width: 100%;
-        align-items: center;
-    }
-    .footer{
-        display: flex;
-        flex-direction: row;
-        width: 85%;
+        text-align: end;
         justify-content: space-between;
-        gap: 100px;
-        height: 280px;
-        padding-top: 50px;
-        padding-bottom: 50px;
-
-        .left-footer{
-            display: flex;
-            flex-direction: column;
-            text-align: end;
-            justify-content: space-between;
-        }
-
-        .info-footer{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
     }
+
+    .info-footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
 </style>

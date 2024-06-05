@@ -5,10 +5,9 @@
 
     <section class="ordenNavComunidad1">
         <nav class="ordenNavComunidad">
-
             <ul class="navCenterComunidad">
                 <li>
-                    <NuxtLink class="textHover" to="/ComunidadPages/Inicio">Inicio</NuxtLink>
+                    <NuxtLink to="/ComunidadPages/Inicio">Inicio</NuxtLink>
                 </li>
                 <li>
                     <NuxtLink class="NavComunidadGreyText" to="/ComunidadPages/Artworks">Artworks</NuxtLink>
@@ -21,28 +20,21 @@
                     </NuxtLink>
                 </li>
             </ul>
-
         </nav>
     </section>
 
     <section>
-
         <h1 class="TituloInicioComunidad">Posts Recientes</h1>
-
 
         <section v-if="data != null">
             <ComunidadPostsIzq v-for="(game, index) in data.results.slice(0, numberOfPostsToShow)" :key="index"
                 :game="game" :count="index" />
         </section>
 
-        <button class="VerMas">
-            <p>
-                Ver mas
-            </p>
+        <button class="VerMas" @click="togglePosts">
+            <p>{{ showMore ? 'Ver menos' : 'Ver más' }}</p>
         </button>
-
     </section>
-
 </template>
 
 <style lang="postcss">
@@ -66,7 +58,6 @@
                 &:hover {
                     color: #0047ff;
                 }
-
             }
         }
     }
@@ -86,12 +77,17 @@
     border-radius: 10px;
     margin-bottom: 40px;
 }
-
 </style>
 
 <script setup>
-const { data } = useFetch('https://api.rawg.io/api/games?key=d45f1e8e88654d059e56f179e27d9327')
+import { ref } from 'vue';
+const { data } = useFetch('https://api.rawg.io/api/games?key=d45f1e8e88654d059e56f179e27d9327');
 
-let numberOfPostsToShow = 3; // Define cuántos juegos quieres mostrar
+let numberOfPostsToShow = ref(3);
+const showMore = ref(false);
 
+const togglePosts = () => {
+    showMore.value = !showMore.value;
+    numberOfPostsToShow.value = showMore.value ? 15 : 3;
+};
 </script>

@@ -1,8 +1,12 @@
+<script setup lang="ts">
+</script>
+
 <template>
   <div class="body">
     <NavBar />
     <NuxtPage />
-    <Footer></Footer>
+    <IniciarSesion></IniciarSesion>
+    <Footer v-if="$route.path !== '/IniciarSesion'"></Footer>
   </div>
 </template>
 
@@ -15,7 +19,7 @@
 * {
   color: #fff;
   font-family: Poppins;
-  //border: solid 1px red;
+//border: 1px solid red;
 
 }
 
@@ -41,7 +45,7 @@ h5{
 }
 
 h6 {
-  font-size: 10px;
+  font-size: 12px;
   color: #76808C;
 }
 
@@ -56,4 +60,5 @@ h6 {
     --color-primary: #0047ff;
   }
 }
+
 </style>

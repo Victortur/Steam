@@ -5,7 +5,6 @@
 
     <section class="ordenNavComunidad1">
         <nav class="ordenNavComunidad">
-
             <ul class="navCenterComunidad">
                 <li>
                     <NuxtLink class="NavComunidadGreyText" to="/ComunidadPages/Inicio">Inicio</NuxtLink>
@@ -21,7 +20,6 @@
                     </NuxtLink>
                 </li>
             </ul>
-
         </nav>
     </section>
 
@@ -30,32 +28,22 @@
             <NuxtLink to="/ComunidadPages/Mercado">
                 <h1 class="TituloInicioComunidad2">Articulos populares</h1>
             </NuxtLink>
-
             <NuxtLink to="/ComunidadPages/MercadoPages/MercadoRecientes">
                 <h1 class="TituloInicioComunidad">Recientes</h1>
             </NuxtLink>
-
         </nav>
 
         <section v-if="data != null">
-            <PastillaJuegos
-                v-for="(game, index) in data.results.slice(0, numberOfGamesToShow)"
-                :key="index"
-                :game="game"
-                :count="index"
-            />
+            <PastillaJuegos v-for="(game, index) in data.results.slice(0, numberOfGamesToShow)" :key="index"
+                :game="game" :count="index" />
         </section>
 
-        <button class="VerMas">
+        <button class="VerMas" @click="toggleGames">
             <p>
-                Ver mas
+                {{ showMore ? 'Ver menos' : 'Ver más' }}
             </p>
         </button>
-
-
-
     </section>
-
 </template>
 
 <style lang="postcss">
@@ -97,11 +85,17 @@
     border-radius: 10px;
     margin-bottom: 40px;
 }
-
 </style>
 
 <script setup>
+import { ref } from 'vue';
 const { data } = useFetch('https://api.rawg.io/api/games?key=d45f1e8e88654d059e56f179e27d9327');
 
-let numberOfGamesToShow = 6; // Define cuántos juegos quieres mostrar
+let numberOfGamesToShow = ref(6);
+const showMore = ref(false);
+
+const toggleGames = () => {
+    showMore.value = !showMore.value;
+    numberOfGamesToShow.value = showMore.value ? 25 : 6;
+};
 </script>

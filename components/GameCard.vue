@@ -24,7 +24,6 @@
     const { count } = props;
 </script>
 
-
 <style lang="postcss">
 
 </style>

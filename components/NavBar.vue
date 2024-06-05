@@ -2,7 +2,7 @@
     <nav class="ordenNav">
         <ul>
             <li class="Steamlogo">
-                <NuxtLink to="/Home"><img src="public/Steamlogo.svg" alt=""></NuxtLink>
+                <NuxtLink to="/"><img src="public/Steamlogo.svg" alt=""></NuxtLink>
             </li>
         </ul>
         <ul class="navCenter">
@@ -10,40 +10,55 @@
                 <NuxtLink class="textHover" to="/SteamCreate">SteamCreate</NuxtLink>
             </li>
             <li>
-                <NuxtLink class="textHover" to="/">Tienda</NuxtLink>
-            </li>
-            <li>
                 <NuxtLink class="textHover" to="/ComunidadPages/Inicio">Comunidad</NuxtLink>
-            </li>
-            <li>
-                <NuxtLink class="textHover" to="/">Users</NuxtLink>
             </li>
         </ul>
         <ul class="navLeft">
             <li class="InstalarAzul">
-                <NuxtLink to="/about">Instalar</NuxtLink>
+                <NuxtLink to="">Instalar</NuxtLink>
             </li>
-            <li>
-                <NuxtLink to="/about">Mateo</NuxtLink>
+            <li v-if="!logged && !modalActive">
+                <button class="btn-login" @click="toggleModal">
+                    Iniciar sesión
+                </button>
             </li>
-            <li>
-                <div class="ordenUser">
-                    <div class="user" @click="panelActive = !panelActive">
-                        <Icon class="iconoUser" name="ic:baseline-account-circle" />
+            <li v-else>
+                <div class="ordenUser" @click="togglePanel">
+                    <div class="user">
+                        <img class="iconoUser" src="public/sonic.png" alt="User Icon" />
                     </div>
-
-                    <div class="panel" v-show="panelActive">
-                    </div>
+                    <div class="panel" v-show="panelActive"></div>
                 </div>
             </li>
         </ul>
 
+        <!-- Componente Modal -->
+        <Modal v-if="modalActive" @close-modal="closeModal" />
     </nav>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-const panelActive = ref(false)
+import { ref } from 'vue';
+import Modal from './Modal.vue';
+
+const panelActive = ref(false);
+const modalActive = ref(false);
+const logged = ref(false);
+
+const togglePanel = () => {
+    panelActive.value = !panelActive.value;
+};
+
+const toggleModal = () => {
+    modalActive.value = !modalActive.value;
+};
+
+const closeModal = (e) => {
+    modalActive.value = false;
+    if (e === 'logged') {
+        logged.value = true;
+    }
+};
 </script>
 
 <style lang="postcss">
@@ -71,28 +86,30 @@ ul {
     position: sticky;
     top: 0;
     z-index: 1000;
+}
 
-    .navCenter {
-        display: flex;
-        align-items: center;
-        .textHover{
-            transition: 300ms;
-                &:hover {
-                    color: #0047ff;
-                }
+.navCenter {
+    display: flex;
+    align-items: center;
+
+    .textHover {
+        transition: 300ms;
+
+        &:hover {
+            color: #0047ff;
         }
     }
+}
 
-    .navLeft {
-        display: flex;
-        align-items: center;
-        .InstalarAzul{
-            background-color: #0047ff;
-            border-radius: 10px;
-        }
+.navLeft {
+    display: flex;
+    align-items: center;
+
+    .InstalarAzul {
+        background-color: #0047ff;
+        border-radius: 10px;
+        margin-right: 10px;
     }
-
-
 }
 
 .ordenUser {
@@ -108,6 +125,7 @@ ul {
         .iconoUser {
             height: 40px;
             width: 40px;
+            border-radius: 100%;
         }
     }
 }
