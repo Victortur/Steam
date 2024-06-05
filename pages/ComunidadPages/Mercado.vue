@@ -74,6 +74,13 @@
         padding: 0px 120px;
         font-size: larger;
         color: #0047ff;
+
+        @media (max-width: 500px) {
+            margin-top: 50px;
+            padding: 0px 20px;
+            font-size: 10px;
+            color: #0047ff;
+        }
     }
 }
 

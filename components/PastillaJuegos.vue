@@ -40,6 +40,16 @@ const { count } = props;
     border-radius: 52px;
     transition: 300ms;
 
+    @media (max-width: 500px) {
+        display: flex;
+        flex-direction: row;
+        margin: 20px 20px;
+        background-color: #111216;
+        height: 300px;
+        border-radius: 20px;
+        transition: 300ms;
+    }
+
     &:hover {
         cursor: pointer;
         transform: scale(102%);
@@ -50,6 +60,13 @@ const { count } = props;
         width: 498.34px;
         border-radius: 52px;
         object-fit: cover;
+
+        @media (max-width: 500px) {
+            width: 100px;
+            border-radius: 20px;
+            object-fit: cover;
+
+        }
     }
 
     .ArticuloPastillaInfo {
@@ -58,6 +75,14 @@ const { count } = props;
         justify-content: space-between;
         width: 500px;
         margin-left: 100px;
+        @media (max-width: 500px) {
+            display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 500px;
+        margin-left: 20px;
+
+        }
 
         .ArticuloName {
             display: flex;

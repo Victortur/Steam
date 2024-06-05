@@ -20,8 +20,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="InicioBoton">
-                        <button type="submit">Iniciar Sesión</button>
+                    <div class="OrdenInicioBoton">
+                        <div class="InicioBoton">
+                            <button type="submit">Iniciar Sesión</button>
+                        </div>
+                        <div class="InicioBoton1">
+                            <button type="button" @click="handleCancel">Cancelar</button>
+                        </div>
                     </div>
                 </div>
             </form>
@@ -57,6 +62,21 @@
         position: absolute;
         position: fixed;
 
+        @media (max-width: 500px) {
+            border-radius: 0%;
+            width: 100%;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            top: 170px;
+            left: 0%;
+            z-index: 999;
+            position: absolute;
+            position: fixed;
+            filter: drop-shadow(0px 0px 30.2px rgba(255, 255, 255, 0.29));
+
+        }
+
 
         .GrandeOrden {
             display: flex;
@@ -70,7 +90,9 @@
             .Inicio {
 
                 .colorb {
-                    color: black
+                    color: black;
+                    
+                    
                 }
             }
 
@@ -112,13 +134,31 @@
                 }
             }
 
-            .InicioBoton {
+            .OrdenInicioBoton {
                 display: flex;
-                justify-content: center;
-                width: 150px;
-                background-color: #0047ff;
-                padding: 10px;
-                border-radius: 10px;
+                flex-direction: row;
+
+                .InicioBoton {
+                    display: flex;
+                    justify-content: center;
+                    width: 150px;
+                    background-color: #0047ff;
+                    padding: 10px;
+                    border-radius: 10px;
+                }
+
+                .InicioBoton1 {
+                    display: flex;
+                    justify-content: center;
+                    width: 150px;
+                    background-color: #ffffff;
+                    padding: 10px;
+                    border-radius: 10px;
+                    color: #0047ff;
+                    border: solid 1px black;
+                    margin-left: 5px;
+                }
+
             }
         }
 
@@ -138,6 +178,22 @@
         position: absolute;
         justify-content: center;
         position: fixed;
+
+        @media (max-width: 500px) {
+            border-radius: 0%;
+            width: 100%;
+            padding: 20px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            z-index: 999;
+            position: absolute;
+            justify-content: center;
+            position: fixed;
+            top: 450px;
+            left: 0%;
+            filter: drop-shadow(0px 0px 30.2px rgba(255, 255, 255, 0.29));
+        }
 
         .registrarse {
             display: flex;
@@ -182,9 +238,4 @@ const submitForm = async () => {
 const handleCancel = () => {
     emit("closeModal");
 };
-
-const closeModal = (e) => {
-    emit("closeModal", e);
-};
 </script>
-

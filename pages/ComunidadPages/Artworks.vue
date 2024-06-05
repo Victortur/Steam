@@ -65,6 +65,11 @@ import TarjetaLargaJuego from '~/components/TarjetaLargaJuego.vue';
     margin-top: 50px;
     padding: 0px 120px;
     font-size: larger;
+    @media (max-width: 500px) {
+        margin-top: 50px;
+    padding: 0px 20px;
+    font-size: 10px;
+    }
 }
 
 </style>

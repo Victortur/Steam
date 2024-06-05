@@ -93,7 +93,7 @@ ul {
     z-index: 1000;
 
     @media (max-width: 500px) {
-        padding: 6px 20px;
+        padding: 6px 10px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;

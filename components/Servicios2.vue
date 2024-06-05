@@ -2,7 +2,8 @@
     <section class="OrdenServ1">
         <div class="OrdenServInf1">
             <h3>Steam deck</h3>
-            <h6 class="white">El Steam Deck es una consola portátil desarrollada por Valve que permite jugar a juegos de
+            <h6 class="white1">El Steam Deck es una consola portátil desarrollada por Valve que permite jugar a juegos
+                de
                 PC en cualquier lugar. Equipada con un hardware potente, incluye una pantalla táctil de 7 pulgadas, un
                 procesador AMD personalizado, y controles integrados como joysticks, botones y trackpads. El dispositivo
                 ejecuta SteamOS, una versión de Linux optimizada para juegos, y ofrece acceso completo a la biblioteca
@@ -26,6 +27,7 @@
     margin-top: 40px;
     margin-bottom: 40px;
     transition: 300ms;
+
     &:hover {
         cursor: pointer;
         transform: scale(102%);
@@ -39,6 +41,13 @@
         margin-left: 10%;
         justify-content: space-between;
         height: 250px;
+
+        .white1 {
+
+            @media (max-width: 500px) {
+                font-size: 8px;
+            }
+        }
 
         .VerMas1 {
             font-size: 13px;

@@ -40,7 +40,7 @@ import ArticleCard from '~/components/global/ArticleCard.vue';
     <div class="Linea1"></div>
 
     <section class="OrdenServicios">
-        <h2>Otros servicios</h2>
+        <h2 class="OrdenServicios1">Otros servicios</h2>
     </section>
 
     <Servicios></Servicios>
@@ -71,7 +71,17 @@ import ArticleCard from '~/components/global/ArticleCard.vue';
 }
 .OrdenServicios{
     margin: 40px 120px;
+    @media (max-width: 500px) {
+        margin: 20px 20px;
+        
+        }
+    .OrdenServicios1{
+        @media (max-width: 500px) {
+            font-size: 20px;
+        }
 
+
+    }
 }
 </style>
 

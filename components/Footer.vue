@@ -39,6 +39,10 @@
     opacity: 70%;
     height: 0.5px;
     width: 100%;
+    margin-top: 20px;
+    @media (max-width: 500px) {
+        margin-top: 20px;
+    }
 }
 
 .footer-container {
@@ -65,8 +69,6 @@
         gap: 5px;
         height: 180px;
         padding: 20px;
-
-
     }
 
     .img-footer {

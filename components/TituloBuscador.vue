@@ -15,6 +15,19 @@
     padding: 100px 120px;
     justify-content: space-between;
 
+    @media (max-width: 500px) {
+        display: flex;
+        flex-direction: row;
+        padding: 20px 20px;
+        justify-content: space-between;
+    }
+
+    .Titulo {
+        @media (max-width: 500px) {
+            font-size: 20px;
+        }
+    }
+
 
     .BuscadorTitulo {
         display: flex;
@@ -27,6 +40,7 @@
         padding: 0px 15px;
         background-color: rgb(33, 33, 33);
         border-radius: 10px;
+
 
         .searchLogo {
             height: 20px;

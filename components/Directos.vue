@@ -69,6 +69,10 @@
             background-color: rgba(17, 18, 22, 1);
             transition: 300ms;
 
+            @media (max-width: 500px) {
+                border-radius: 20px;
+            }
+
             &:hover {
                 cursor: pointer;
                 transform: scale(102%);
