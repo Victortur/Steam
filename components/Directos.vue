@@ -48,7 +48,7 @@
         justify-content: space-between;
 
         .OrdenDirecto21 {
-            width: 480px;
+            width: 490px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
